@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>First-Contact Language Access Tool — Prototype</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="mark" aria-hidden="true">🌐</div>
+      <div>
+        <p class="eyebrow">QI PROTOTYPE</p>
+        <h1>First-Contact Language Access Tool</h1>
+      </div>
+    </header>
+
+    <section class="notice">
+      <strong>Purpose:</strong> Identify a language the person understands, then connect with an approved professional interpreter.
+      <br><strong>Do not use this tool for clinical interpretation.</strong>
+    </section>
+
+    <section class="instruction">
+      <h2>Listen for a language you understand</h2>
+      <p>The nurse can play the message below. If you understand it, indicate yes.</p>
+    </section>
+
+    <section class="language-card" id="swahili-card">
+      <div>
+        <span class="language-native">Kiswahili</span>
+        <span class="language-english">Swahili · Test language</span>
+      </div>
+      <button class="play" id="play-swahili" type="button">▶ Play message</button>
+      <audio id="swahili-audio" preload="metadata">
+        <source src="audio/swahili.mp3" type="audio/mpeg">
+      </audio>
+      <p class="audio-status" id="audio-status" aria-live="polite"></p>
+      <button class="identified" id="identified-swahili" type="button">✓ This language is understood</button>
+    </section>
+
+    <section class="next-step hidden" id="next-step" aria-live="polite">
+      <div class="check">✓</div>
+      <h2>Language identified: Kiswahili (Swahili)</h2>
+      <p>Use your organization's approved professional interpretation service for further communication.</p>
+      <button id="reset" type="button">Start again</button>
+    </section>
+
+    <footer>
+      Student quality-improvement prototype · No personal information is collected or stored.
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
